@@ -37,7 +37,7 @@ EOD
 EOM
 
 crontab -l > tmpcron
-echo "*/1 * * * * sh $FILE" >> tmpcron
+echo "*/1 * * * * sh $FILE >/dev/null 2>&1" >> tmpcron
 
 crontab tmpcron
 rm tmpcron
